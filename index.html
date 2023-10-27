@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Mega-Sena Game!</title>
+</head>
+<body>
+  
+  <header>
+    <div class="container">
+    <h1>Mega-Sena</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="container" id="container-home">
+      <section class="qnt-numbers">
+        <h2 class="h2-title">Quantos números você deseja apostar?</h2>
+        <div class="container-labels"></div>
+      </section>
+
+      <section class="valor-aposta">
+        <h2 class="h2-title">Valor da aposta:</h2>
+        <span id="valor">R$ 4,50</span>
+        <button id="btn-next">Continuar</button>
+        <small>Valores tirados do site <a href="http://loterias.caixa.gov.br/wps/portal/loterias/landing/megasena" target="_blank">Loterias - Caixa</a></small>
+      </section>
+    </div> <!-- fim container home -->
+
+    <div class="container hidden" id="container-bet">
+      <section class="qnt-numbers">
+        <h2 class="h2-title">Escolha seus números:</h2>
+        <span id="restantes"></span>
+        <div class="choose-numbers"></div>
+        <button id="btn-voltar">Voltar</button>
+        <button id="btn-bet" class="btn-disabled" disabled="">Continuar</button>
+      </section>
+    </div>
+
+    <div class="overlay hidden"></div>
+    <div class="confirmation hidden">
+      <section class="box-confirmation">
+        <h2 class="h2-title">Seus números:</h2>
+        <div class="confirm-labels">
+        </div> <!-- fim confirm labels -->
+        <div class="buttons">
+          <button class="btn-action" id="btn-cancelar">Cancelar</button>
+          <button class="btn-action" id="btn-play">Confirmar aposta</button>
+        </div>
+      </section>
+    </div> <!-- fim confirmation -->
+
+    <section id="resultado" class="hidden">
+      <h2 class="h2-title center">Resultado:</h2>
+      <section id="numeros-sorteados" style="margin-top: 20px;"></section>
+      <br>
+      <section id="seus-numeros"></section>
+      <section id="pontos">
+        <h1 class="h1-title center title-resultado"></h1><br>
+        <p class="description center description-resultado"></p>
+      </section>
+
+      <button class="btn-action" id="btn-reload">Tentar novamente!</button>
+    </section>
+
+  </main> <!-- fim main -->
+
+  <script src="./js/scripts.js"></script>
+</body>
+</html>
